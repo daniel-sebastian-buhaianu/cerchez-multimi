@@ -167,5 +167,96 @@ void rezolvare_metoda1(int n, int m)
 
 void rezolvare_metoda2(int n, int m)
 {
-	//TODO
+	int a[MAX_NR+1], b[MAX_NR+1], i, x;
+
+	// initializare vectori caracteristici
+
+	for (i = 0; i <= MAX_NR; i++)
+	{
+		a[i] = b[i] = 0;
+	}
+
+	// citesc elem. mult. A
+
+	cout << "Elementele multimii A\n";
+
+	for (i = 0; i < n; i++)
+	{
+		cout << "a[" << i << "] = "; cin >> x;
+
+		while (a[x] == 1)
+		{
+			cout << "Eroare: acest numar exista deja in multimea A\n";
+			cout << "a[" << i << "] = "; cin >> x;
+		}
+
+		a[x] = 1;
+	}
+	
+	// afisez elem. mult. A
+
+	cout << "A = { ";
+
+	for (i = 0; i <= MAX_NR; i++)
+	{
+		if (a[i] == 1)
+		{
+			cout << i << " ";
+		}
+	}
+
+	cout << "}\n";
+	
+	// citesc elem. mult. B
+
+	for (i = 0; i < m; i++)
+	{
+		cout << "b[" << i << "] = "; cin >> x;
+
+		while (b[x] == 1)
+		{
+			cout << "Eroare: acest numar exista deja in multimea B\n";
+			cout << "b[" << i << "] = "; cin >> x;
+		}
+
+		b[x] = 1;
+	}
+
+	// afisez elem. mult. B
+
+	cout << "B = { ";
+
+	for (i = 0; i <= MAX_NR; i++)
+	{
+		if (b[i] == 1)
+		{
+			cout << i << " ";
+		}
+	}
+
+	cout << "}\n";
+
+	// afisez A intersectat cu B
+
+	cout << "A intersectat cu B: ";
+
+	for (i = 0; i <= MAX_NR; i++)
+	{
+		if (a[i] && b[i])
+		{
+			cout << i << " ";
+		}
+	}
+
+	// afisez A reunit cu B
+
+	cout << "\nA reunit cu B: ";
+
+	for (i = 0; i <= MAX_NR; i++)
+	{
+		if (a[i] || b[i])
+		{
+			cout << i << " ";
+		}
+	}
 }
