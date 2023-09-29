@@ -1,1 +1,2 @@
 # cerchez-multimi
+Se citesc de la tastatura doua multimi A si B cu n, respectiv m elemente numere naturale mai mici decat 1000. Sa se determine intersectia si reuniunea celor doua multimi. Implementati mai intai o multime ca un vector in care memorati elementele multimii, apoi prin vector caracteristic. Realizati o comparatie intre eficienta implementarii celor doua operatii cu cele doua reprezentari.
